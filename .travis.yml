@@ -4,8 +4,10 @@ cache: packages
 r_github_packages: krlmlr/travis@develop
 after_success:
   - R -e "travis::deploy(tasks = c('travis::task_install_ssh_keys()'))"
+  - git remote remove origin
   - git remote add origin git@github.com:${TRAVIS_REPO_SLUG}
   - git checkout ${TRAVIS_BRANCH}
+  - user_email=$(git show --format="%ae" | head -n 1)
+  - user_name=$(git show --format="%an" | head -n 1)
   - git commit -m "test [ci skip]" --allow-empty
   - git push -u origin HEAD
-
