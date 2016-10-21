@@ -7,7 +7,7 @@ after_success:
   - git remote remove origin
   - git remote add origin git@github.com:${TRAVIS_REPO_SLUG}
   - git checkout ${TRAVIS_BRANCH}
-  - user_email=$(git show --format="%ae" | head -n 1)
-  - user_name=$(git show --format="%an" | head -n 1)
+  - git config user.email "$(git show --format="%ae" | head -n 1)"
+  - git config user.name "$(git show --format="%an" | head -n 1)"
   - git commit -m "test [ci skip]" --allow-empty
   - git push -u origin HEAD
