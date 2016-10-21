@@ -1,7 +1,7 @@
 Package: testTestthat
 Title: What the Package Does (one line, title case)
 Version: 0.0-0
-Authors@R: as.person("Kirill Müller <krlmlr+r@mailbox.org> [aut, cre]")
+Authors@R: person(given = "Kirill", family = "Müller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org")
 Description: What the package does (one paragraph).
 Depends: R (>= 3.2.0)
 License: GPL-3
