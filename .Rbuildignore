@@ -1,3 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^R/testthat$
+^\.travis\.yml$
+^\.deploy_key\.pub$
+^\.deploy_key\.enc$
